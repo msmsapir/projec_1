@@ -20,6 +20,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.login.widget.ProfilePictureView;
+
 public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     ArrayList<Tremps> actorList;
     LayoutInflater vi;
@@ -42,7 +44,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         if (v == null) {
             holder = new ViewHolder();
             v = vi.inflate(Resource, null);
-            //holder.imageview = (ImageView) v.findViewById(R.id.ivImage);
+            holder.profilePictureView = (ProfilePictureView) v.findViewById(R.id.picture);
             holder.id = (TextView) v.findViewById(R.id.id);
             holder.source = (TextView) v.findViewById(R.id.source);
             holder.dest = (TextView) v.findViewById(R.id.dest);
@@ -58,6 +60,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         }
         // holder.imageview.setImageResource(R.drawable.ic_launcher);
         // new DownloadImageTask(holder.imageview).execute(actorList.get(position).getImage());
+        holder.profilePictureView.setProfileId(actorList.get(position).getTrempDriverId());
         holder.id.setText(actorList.get(position).getTrempID());
         holder.source.setText(actorList.get(position).getTrempSource());
         holder.dest.setText("B'day: " + actorList.get(position).getTrempDest());
@@ -72,7 +75,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     }
 
     static class ViewHolder {
-        // public ImageView imageview;
+        public ProfilePictureView profilePictureView;
         public TextView id;
         public TextView source;
         public TextView dest;
@@ -84,7 +87,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         public TextView maslolim;
 
     }
-
+/*
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
@@ -110,4 +113,5 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         }
 
     }
+    */
 }
