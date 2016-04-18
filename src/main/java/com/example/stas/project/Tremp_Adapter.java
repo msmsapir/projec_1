@@ -4,7 +4,6 @@ package com.example.stas.project;
  * Created by stas on 17/04/16.
  */
 
-
 import java.io.InputStream;
 import java.util.ArrayList;
 

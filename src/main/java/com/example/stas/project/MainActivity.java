@@ -170,9 +170,8 @@ public class MainActivity extends Activity {
             profilePictureView.setProfileId(get);
 
 
-
             Button orderButton = (Button)findViewById(R.id.post);
-            Button stas = (Button)findViewById(R.id.post);
+    
 
             orderButton.setOnClickListener(new View.OnClickListener() {
 
