@@ -1,10 +1,7 @@
 package com.example.stas.project;
-
 /**
  * Created by stas on 17/04/16.
  */
-
-
 public class Tremps {
 
     private String trempID;
@@ -20,8 +17,8 @@ public class Tremps {
 
 
 
-    public Tremps( String trempID , String trempSource , String trempDest, String trempDriverId,  String trempOutTime, String trempArriveTime,
-                   String trempPostedAt, int trempNumberP,String trempMaslulim )
+    public Tremps(String trempID, String trempSource, String trempDest, String trempDriverId, String trempOutTime, String trempArriveTime,
+                  String trempPostedAt, int trempNumberP, String trempMaslulim)
     {
         this.trempID=trempID;
         this.trempSource=trempSource;
@@ -124,4 +121,3 @@ public class Tremps {
     }
 
 }
-

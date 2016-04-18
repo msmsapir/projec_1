@@ -4,9 +4,6 @@ package com.example.stas.project;
  * Created by stas on 17/04/16.
  */
 
-import java.io.InputStream;
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -19,7 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.facebook.login.widget.ProfilePictureView;
+import java.io.InputStream;
+import java.util.ArrayList;
 
 public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     ArrayList<Tremps> actorList;
@@ -43,7 +41,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         if (v == null) {
             holder = new ViewHolder();
             v = vi.inflate(Resource, null);
-            holder.profilePictureView = (ProfilePictureView) v.findViewById(R.id.picture);
+            //holder.imageview = (ImageView) v.findViewById(R.id.ivImage);
             holder.id = (TextView) v.findViewById(R.id.id);
             holder.source = (TextView) v.findViewById(R.id.source);
             holder.dest = (TextView) v.findViewById(R.id.dest);
@@ -57,9 +55,8 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         } else {
             holder = (ViewHolder) v.getTag();
         }
-        // holder.imageview.setImageResource(R.drawable.ic_launcher);
-        // new DownloadImageTask(holder.imageview).execute(actorList.get(position).getImage());
-        holder.profilePictureView.setProfileId(actorList.get(position).getTrempDriverId());
+       // holder.imageview.setImageResource(R.drawable.ic_launcher);
+       // new DownloadImageTask(holder.imageview).execute(actorList.get(position).getImage());
         holder.id.setText(actorList.get(position).getTrempID());
         holder.source.setText(actorList.get(position).getTrempSource());
         holder.dest.setText("B'day: " + actorList.get(position).getTrempDest());
@@ -74,7 +71,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     }
 
     static class ViewHolder {
-        public ProfilePictureView profilePictureView;
+       // public ImageView imageview;
         public TextView id;
         public TextView source;
         public TextView dest;
@@ -86,7 +83,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         public TextView maslolim;
 
     }
-/*
+
     private class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
         ImageView bmImage;
 
@@ -112,5 +109,4 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         }
 
     }
-    */
 }

@@ -25,7 +25,7 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class Find_Ride extends Activity {
+public class Find_ride extends Activity {
 
     ArrayList<Tremps> trempsList;
 
@@ -34,7 +34,7 @@ public class Find_Ride extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_find__ride);
+        setContentView(R.layout.activity_find_ride);
         trempsList = new ArrayList<Tremps>();
         new JSONAsyncTask().execute("http://sapironmyway.pe.hu/get-data.php");
 
@@ -62,7 +62,7 @@ public class Find_Ride extends Activity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialog = new ProgressDialog(Find_Ride.this);
+            dialog = new ProgressDialog(Find_ride.this);
             dialog.setMessage("Loading, please wait");
             dialog.setTitle("Connecting server");
             dialog.show();

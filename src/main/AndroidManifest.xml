@@ -42,9 +42,7 @@
         <activity
             android:name=".Activity"
             android:label="@string/title_activity_" />
-        <activity
-            android:name=".Find_Ride"
-            android:label="@string/title_activity_find__ride"></activity>
+        <activity android:name=".Find_ride"></activity>
     </application>
 
 </manifest>
