@@ -16,6 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.facebook.login.widget.ProfilePictureView;
+
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -24,6 +26,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     LayoutInflater vi;
     int Resource;
     ViewHolder holder;
+     ProfilePictureView profilePictureView;
 
     public Tremp_Adapter(Context context, int resource, ArrayList<Tremps> objects) {
         super(context, resource, objects);
@@ -42,6 +45,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
             holder = new ViewHolder();
             v = vi.inflate(Resource, null);
             //holder.imageview = (ImageView) v.findViewById(R.id.ivImage);
+            holder.profilePictureView = (ProfilePictureView)v.findViewById(R.id.picture);
             holder.id = (TextView) v.findViewById(R.id.id);
             holder.source = (TextView) v.findViewById(R.id.source);
             holder.dest = (TextView) v.findViewById(R.id.dest);
@@ -55,8 +59,9 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
         } else {
             holder = (ViewHolder) v.getTag();
         }
-       // holder.imageview.setImageResource(R.drawable.ic_launcher);
-       // new DownloadImageTask(holder.imageview).execute(actorList.get(position).getImage());
+    
+        holder.profilePictureView.setProfileId(actorList.get(position).getTrempDriverId().toString());
+
         holder.id.setText(actorList.get(position).getTrempID());
         holder.source.setText(actorList.get(position).getTrempSource());
         holder.dest.setText("B'day: " + actorList.get(position).getTrempDest());
@@ -71,7 +76,7 @@ public class Tremp_Adapter extends ArrayAdapter<Tremps> {
     }
 
     static class ViewHolder {
-       // public ImageView imageview;
+        public   ProfilePictureView profilePictureView;
         public TextView id;
         public TextView source;
         public TextView dest;
