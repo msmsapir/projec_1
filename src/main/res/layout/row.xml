@@ -15,36 +15,48 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+            <com.facebook.login.widget.ProfilePictureView
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="81dp"
+                style="@style/TextAppearance.AppCompat">
 
-            <TextView
+            </com.facebook.login.widget.ProfilePictureView>
+
+
+            <!--<TextView
                 android:id="@+id/id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tom Cruise"
                 android:textColor="#166CED"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-
+-->
             <TextView
                 android:id="@+id/source"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#D64530"
-                android:text="Date of Birth: July 3, 1962" />
+                android:text="Source" />
 
             <TextView
                 android:id="@+id/dest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Height: 1.80 m"
+                android:text="Destination"
                 android:textColor="#D64530"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/driver_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#D64530"
-                android:text="United States" />
+                android:text="user_id" />
+                -->
 
         </LinearLayout>
 
@@ -55,29 +67,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#009A57"
-        android:text="Description" />
+        android:text="Out_time" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/arrive_time"
         android:layout_width="wrap_content" android:textColor="#166CED"
         android:layout_height="wrap_content"
         android:text="Spouse: Katie Holmes" />
+        -->
 
     <TextView
         android:id="@+id/posted_at"
         android:layout_width="wrap_content" android:textColor="#166CED"
         android:layout_height="wrap_content"
-        android:text="Children: Suri Cruise, Isabella Jane Cruise, Connor Cruise" />
+        android:text="Published At" />
 
     <TextView
         android:id="@+id/nof_p"
         android:layout_width="wrap_content" android:textColor="#166CED"
         android:layout_height="wrap_content"
-        android:text="Children: Suri Cruise, Isabella Jane Cruise, Connor Cruise" />
+        android:text="Passangers" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/mas"
         android:layout_width="wrap_content" android:textColor="#166CED"
         android:layout_height="wrap_content"
         android:text="Children: Suri Cruise, Isabella Jane Cruise, Connor Cruise" />
+        -->
 </LinearLayout>
